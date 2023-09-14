@@ -1,0 +1,58 @@
+body{
+  background-image: url(./April.jpeg);
+
+  /* 배경으로 가로 이미지에 맞게 꽉 채우고 싶다면 */
+  /* background-size: 100%; */
+
+  /* 배경을 중앙으로 맞게 채우고 싶다면 
+  부작용 : 시계를 만들었는데 그게 로딩되는 시간이 느리다 보니까 이미지도
+  시계 나올때 다시 조정되어 보기 안 좋다. */
+  background-position: center;
+
+}
+
+#title {
+    text-align: center;
+  }
+
+.js-clock{
+  font-size: 3em;
+  font-weight: 100;
+  color: white;
+  padding: 20px;
+  width: 700px;    
+  /* 여기서 center 되는 것은 js-clock 안에 있는 글자 요소들이다. 
+  기억할 것 => text=align은 문자만 중앙정렬 할 수 있다.*/
+  text-align: center;
+  /* 여기서 중앙정렬되는 것은 div, 블록요소들이다. 
+  기억할 것 => margin: auto는 블록 요소도 중앙정렬할 수 있다.*/
+  margin: auto;
+}
+
+div{
+  /* block/inline/inline-block의 차이점
+  한 줄을 독차지 하느냐 아니냐의 차이
+  block -> 한줄 & width, height, margin, padding 속성이 모두 반영
+  ex) div,p,h1
+  inline -> 한줄에 여러 개 & margin과 padding 속성은 좌우 간격만 반영이 되고, 상하 간격은 반영이 되지 않음.
+  ex)span,a 
+  inline-block -> 나란히 배치 but width와 height 속성 지정 및 margin과 padding 속성의 상하 간격 지정이 가능
+  ex) button, input, select*/
+  display: inline-block;
+  min-width: 90px;
+  padding: 15px;
+  background: #020b43;
+  border-radius: 10px;
+  border: 2px solid #030d52;
+  margin: 15px;
+}
+
+div span{
+  color: #ffffff;
+  /* 그래서 여기 같은 경우는 좀 더 깔끔하게 보이게 하기 위해서 
+  한줄보다 2줄을 사용했다. */
+    display: block;
+    margin-top: 15px;
+    font-size: .35em;
+    font-weight: 400;
+}
